@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Home from './containers/Home';
@@ -21,12 +21,10 @@ export default function App() {
         <meta name="theme-color" content="#dd9323" />
         <meta name="author" content="Anthony Collier" />
       </Helmet>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route component={Home} />
-        </Switch>
-      </Suspense>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route component={Home} />
+      </Switch>
     </Router>
   );
 }
