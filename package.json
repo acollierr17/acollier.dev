@@ -7,11 +7,19 @@
   "repository": "https://github.com/acollierr17/acollier.dev",
   "homepage": "https://acollier.dev",
   "private": true,
+  "reactSnap": {
+    "source": "build",
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": false
+    }
+  },
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "postbuild": "react-snap"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.1.1",
@@ -37,6 +45,7 @@
     "@types/snowpack-env": "^2.3.2",
     "@web/test-runner": "^0.10.0",
     "prettier": "^2.0.5",
+    "react-snap": "^1.23.0",
     "snowpack": "^2.18.4",
     "typescript": "^4.0.0"
   }
