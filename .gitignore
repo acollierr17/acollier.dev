@@ -113,3 +113,6 @@ dist
 build
 .build
 web_modules
+
+# Local Netlify folder
+.netlify
