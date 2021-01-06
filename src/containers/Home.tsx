@@ -9,6 +9,7 @@ export default function Home() {
     <>
       <Helmet>
         <title>Home</title>
+        <meta property="og:title" content="Home" />
       </Helmet>
       <Container
         pos="fixed"

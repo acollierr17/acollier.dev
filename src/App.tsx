@@ -10,16 +10,20 @@ export default function App() {
         <html lang="en" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        
+        {/* Primary Meta Tags  */}
         <meta
           name="description"
           content="My personal website and corner on the internet!"
         />
-        <meta
-          name="og:description"
-          content="My personal website and corner on the internet!"
-        />
-        <meta name="theme-color" content="#dd9323" />
         <meta name="author" content="Anthony Collier" />
+        <meta name="theme-color" content="#dd9323" />
+
+        {/* Open Graph / FaceBook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://acollier.dev/" />
+        <meta property="og:description" content="My personal website and corner on the internet!" />
+        <meta property="og:image" content=""  />
       </Helmet>
       <Switch>
         <Route exact path="/" component={Home} />
