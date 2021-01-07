@@ -46,8 +46,9 @@ export default function Profile(props: ProfileProps) {
 
   const textStyle = {
     'font-size': show ? 'smaller' : '0px',
-    'padding-left': show ? '3px' : '0px',
-    transition: 'font-size 0.6s 0.1s, padding-left 0.6s',
+    'padding-left': show ? '0.8rem' : '0px',
+    'padding-bottom': show ? '3px' : '0px',
+    transition: 'font-size 0.6s 0.1s, padding-left 0.6s, padding-bottom 0.6s',
     'animation-timing-function': show ? 'ease-in' : 'ease-out',
   };
 
@@ -81,7 +82,7 @@ export default function Profile(props: ProfileProps) {
         rel="noopener noreferrer">
         <Text display="flex" alignItems="center">
           {getProfileIcon()}
-          <Text px="1px" style={textStyle}>
+          <Text style={textStyle}>
             {props.name}
           </Text>
         </Text>

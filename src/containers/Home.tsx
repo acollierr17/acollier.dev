@@ -5,6 +5,12 @@ import { ColorModeSwitcher } from '../components/ColorModeSwitcher';
 import Profile from '../components/Profile';
 
 export default function Home() {
+  const styles = {
+    'box-sizing': 'border-box',
+    '-moz-box-sizing': 'border-box', /* Firefox */
+    '-webkit-box-sizing': 'border-box', /* Safari */
+  };
+
   return (
     <>
       <Helmet>
@@ -39,7 +45,7 @@ export default function Home() {
           </Text>
         </Box>
         <Container>
-          <Stack direction="row" spacing="17px">
+          <Stack direction="row" spacing="17px" justify="center">
             <Profile
               name="GitHub"
               link="https://github.com/acollierr17"
