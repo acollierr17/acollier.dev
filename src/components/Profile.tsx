@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Badge, BadgeProps, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { FaGithub, FaDiscord } from 'react-icons/fa';
-import { AiFillYoutube } from 'react-icons/ai';
+import ProfileIcon from './ProfileIcon'
 
 interface ProfileProps {
-  name: string;
+  name: 'GitHub' | 'Discord' | 'YouTube';
+  colorScheme?: 'github' | 'discord' | 'youtube';
   link?: string;
   external?: boolean;
 }
@@ -20,22 +20,9 @@ export default function Profile(props: ProfileProps) {
     return hovering
       ? setHovered({
           variant: 'subtle',
-          colorScheme: 'brand',
+          colorScheme: props?.colorScheme ?? 'brand',
         })
       : setHovered({});
-  };
-
-  const getProfileIcon = () => {
-    switch (props.name) {
-      case 'GitHub':
-        return <FaGithub />;
-      case 'Discord':
-        return <FaDiscord />;
-      case 'YouTube':
-        return <AiFillYoutube />;
-      default:
-        return;
-    }
   };
 
   const badgeStyle = {
@@ -63,6 +50,7 @@ export default function Profile(props: ProfileProps) {
       h="65px"
       minW="65px"
       style={badgeStyle}
+      bgColor="currentColor"
       onMouseEnter={(e) => {
         setShow(true);
         setBadgeProps(true);
@@ -81,8 +69,8 @@ export default function Profile(props: ProfileProps) {
         target="_blank"
         rel="noopener noreferrer">
         <Text display="flex" alignItems="center">
-          {getProfileIcon()}
-          <Text style={textStyle}>
+          <ProfileIcon name={props.name} />
+          <Text color="gray.800" style={textStyle}>
             {props.name}
           </Text>
         </Text>

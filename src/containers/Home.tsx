@@ -43,16 +43,19 @@ export default function Home() {
             <Profile
               name="GitHub"
               link="https://github.com/acollierr17"
+              colorScheme="github"
               external
             />
             <Profile
               name="Discord"
               link="https://discord.gg/g7wr8xb"
+              colorScheme="discord"
               external
             />
             <Profile
               name="YouTube"
               link="https://www.youtube.com/channel/UCI_HY3KnAH_VusYqFvL2U9g"
+              colorScheme="youtube"
               external
             />
           </Stack>
