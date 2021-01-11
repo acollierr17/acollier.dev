@@ -46,9 +46,10 @@ export default function Profile(props: ProfileProps) {
 
   const textStyle = {
     'font-size': show ? 'smaller' : '0px',
-    'padding-left': show ? '0.8rem' : '0px',
-    'padding-bottom': show ? '3px' : '0px',
-    transition: 'font-size 0.6s 0.1s, padding-left 0.6s, padding-bottom 0.6s',
+    'letter-spacing': show ? 'inherit' : '-10px',
+    'padding-left': show ? '0.8rem' : 'inherit',
+    'padding-bottom': show ? '3px' : 'inherit',
+    transition: 'font-size 0.6s 0.1s, padding-left 0.6s, padding-bottom 0.6s, letter-spacing 0.6s 0.3s',
     'animation-timing-function': show ? 'ease-in' : 'ease-out',
   };
 
@@ -59,9 +60,8 @@ export default function Profile(props: ProfileProps) {
       px={4}
       py={4}
       fontSize="2rem"
-      maxW="560px"
-      maxH="100px"
       h="65px"
+      minW="65px"
       style={badgeStyle}
       onMouseEnter={(e) => {
         setShow(true);
