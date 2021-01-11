@@ -45,6 +45,7 @@
     "@types/snowpack-env": "2.3.3",
     "@web/test-runner": "0.10.2",
     "prettier": "2.2.1",
+    "react-snap": "^1.23.0",
     "snowpack": "2.18.5",
     "typescript": "4.1.3"
   }
