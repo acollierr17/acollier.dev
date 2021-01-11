@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Badge, BadgeProps, Text } from '@chakra-ui/react';
+import { Badge, BadgeProps, Text, useColorMode } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import ProfileIcon from './ProfileIcon';
 
@@ -15,6 +15,9 @@ type HoverResult = BadgeProps | {};
 export default function Profile(props: ProfileProps) {
   const [show, setShow] = useState(false);
   const [hovered, setHovered] = useState<HoverResult>({});
+
+  const { colorMode } = useColorMode();
+  const isDarkMode = colorMode === 'dark';
 
   const setBadgeProps = (hovering: boolean) => {
     return hovering
@@ -71,7 +74,7 @@ export default function Profile(props: ProfileProps) {
         rel="noopener noreferrer">
         <Text display="flex" alignItems="center">
           <ProfileIcon name={props.name} />
-          <Text color="gray.800" style={textStyle}>
+          <Text color={isDarkMode ? 'gray.800' : 'white'} style={textStyle}>
             {props.name}
           </Text>
         </Text>
