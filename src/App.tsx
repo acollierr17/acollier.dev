@@ -10,7 +10,7 @@ export default function App() {
         <html lang="en" />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        
+
         {/* Primary Meta Tags  */}
         <meta
           name="description"
@@ -22,8 +22,11 @@ export default function App() {
         {/* Open Graph / FaceBook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://acollier.dev/" />
-        <meta property="og:description" content="My personal website and corner on the internet!" />
-        <meta property="og:image" content=""  />
+        <meta
+          property="og:description"
+          content="My personal website and corner on the internet!"
+        />
+        <meta property="og:image" content="" />
       </Helmet>
       <Switch>
         <Route exact path="/" component={Home} />

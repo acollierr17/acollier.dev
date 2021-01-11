@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Badge, BadgeProps, Text } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import ProfileIcon from './ProfileIcon'
+import ProfileIcon from './ProfileIcon';
 
 interface ProfileProps {
   name: 'GitHub' | 'Discord' | 'YouTube';
@@ -36,7 +36,8 @@ export default function Profile(props: ProfileProps) {
     'letter-spacing': show ? 'inherit' : '-10px',
     'padding-left': show ? '0.8rem' : 'inherit',
     'padding-bottom': show ? '3px' : 'inherit',
-    transition: 'font-size 0.6s 0.1s, padding-left 0.6s, padding-bottom 0.6s, letter-spacing 0.6s 0.3s',
+    transition:
+      'font-size 0.6s 0.1s, padding-left 0.6s, padding-bottom 0.6s, letter-spacing 0.6s 0.3s',
     'animation-timing-function': show ? 'ease-in' : 'ease-out',
   };
 
