@@ -1,5 +1,5 @@
 import React from 'react';
-import { useColorMode } from '@chakra-ui/react'
+import { useColorMode } from '@chakra-ui/react';
 import { Icon } from '@chakra-ui/react';
 import { FaGithub, FaDiscord } from 'react-icons/fa';
 import { AiFillYoutube } from 'react-icons/ai';
