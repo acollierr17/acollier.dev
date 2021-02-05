@@ -1,8 +1,8 @@
 {
-  "name": "@august/floofy.dev",
+  "name": "acollier.dev",
   "description": "About 🌐 My personal website built with React.js, TypeScript, and, @snowpackjs, and @chakra-ui.",
   "version": "1.0.0",
-  "author": "Anthony Collier <gamemaniac101@gmail.com>",
+  "author": "Anthony Collier <hello@acollier.dev>",
   "license": "MIT",
   "repository": "https://github.com/acollierr17/acollier.dev",
   "homepage": "https://acollier.dev",
