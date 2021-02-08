@@ -9,29 +9,9 @@ module.exports = {
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
   ],
-  install: [
-    /* ... */
-  ],
-  installOptions: {
-    /* ... */
-  },
-  devOptions: {
-    /* ... */
-  },
-  buildOptions: {
-    /* ... */
-  },
-  proxy: {
-    /* ... */
-  },
-  alias: {
-    /* ... */
-  },
-  experiments: {
-    optimize: {
-      bundle: true,
-      minify: true,
-      target: 'es2018'
-    }
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: 'es2018'
   }
 };
