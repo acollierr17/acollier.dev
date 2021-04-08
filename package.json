@@ -43,7 +43,7 @@
     "@types/react-helmet": "6.1.0",
     "@types/react-router-dom": "5.1.7",
     "@types/snowpack-env": "2.3.3",
-    "@web/test-runner": "0.12.15",
+    "@web/test-runner": "0.12.19",
     "prettier": "2.2.1",
     "react-snap": "1.23.0",
     "snowpack": "3.0.11",
