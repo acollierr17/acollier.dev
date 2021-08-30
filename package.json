@@ -15,38 +15,29 @@
     }
   },
   "scripts": {
-    "start": "snowpack dev",
-    "build": "snowpack build",
+    "start": "next start",
+    "build": "next build",
+    "dev": "next dev",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
-    "postbuild": "react-snap"
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
     "@chakra-ui/react": "1.5.1",
     "@emotion/react": "11.1.5",
     "@emotion/styled": "11.3.0",
     "framer-motion": "4.1.4",
+    "next": "^11.1.0",
+    "next-seo": "^4.26.0",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-helmet": "6.1.0",
-    "react-icons": "4.2.0",
-    "react-router-dom": "5.2.0"
+    "react-icons": "4.2.0"
   },
   "devDependencies": {
-    "@snowpack/plugin-dotenv": "2.1.0",
-    "@snowpack/plugin-typescript": "1.2.1",
-    "@snowpack/plugin-react-refresh": "2.4.2",
-    "@snowpack/web-test-runner-plugin": "0.2.2",
     "@testing-library/react": "11.2.6",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@types/react-helmet": "6.1.1",
-    "@types/react-router-dom": "5.1.7",
-    "@types/snowpack-env": "2.3.3",
     "@web/test-runner": "0.12.19",
     "prettier": "2.2.1",
-    "react-snap": "1.23.0",
-    "snowpack": "3.3.1",
     "typescript": "4.2.4"
   }
 }

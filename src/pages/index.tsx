@@ -1,16 +1,12 @@
-import React from 'react';
 import { Box, Text, Stack, Container, Heading } from '@chakra-ui/react';
-import { Helmet } from 'react-helmet';
+import { NextSeo } from 'next-seo';
 import { ColorModeSwitcher } from '../components/ColorModeSwitcher';
 import Profile from '../components/Profile';
 
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <title>Home</title>
-        <meta property="og:title" content="Home" />
-      </Helmet>
+      <NextSeo title="Home" openGraph={{ title: 'Home' }} />
       <Container
         pos="fixed"
         top="50%"
