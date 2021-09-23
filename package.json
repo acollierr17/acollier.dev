@@ -15,7 +15,7 @@
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
   },
   "dependencies": {
-    "@chakra-ui/react": "1.5.1",
+    "@chakra-ui/react": "1.6.8",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "framer-motion": "4.1.17",
