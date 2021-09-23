@@ -7,13 +7,6 @@
   "repository": "https://github.com/acollierr17/acollier.dev",
   "homepage": "https://acollier.dev",
   "private": true,
-  "reactSnap": {
-    "source": "build",
-    "minifyHtml": {
-      "collapseWhitespace": false,
-      "removeComments": false
-    }
-  },
   "scripts": {
     "start": "next start",
     "build": "next build",
