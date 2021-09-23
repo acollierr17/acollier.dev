@@ -44,7 +44,7 @@ export default function Home() {
             />
             <Profile
               name="Discord"
-              link="https://discord.gg/g7wr8xb"
+              link="https://discord.gg/rgK9cGTwEs"
               colorScheme="discord"
               external
             />
