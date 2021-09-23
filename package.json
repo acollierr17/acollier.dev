@@ -1,6 +1,6 @@
 {
   "name": "acollier.dev",
-  "description": "About 🌐 My personal website built with Next.js, TypeScript,  and @chakra-ui.",
+  "description": "My personal website built with Next.js, TypeScript, and Chakra UI.",
   "version": "1.0.0",
   "author": "Anthony Collier <hello@acollier.dev>",
   "license": "MIT",
