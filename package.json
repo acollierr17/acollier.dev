@@ -1,6 +1,6 @@
 {
   "name": "acollier.dev",
-  "description": "About 🌐 My personal website built with React.js, TypeScript, and, @snowpackjs, and @chakra-ui.",
+  "description": "About 🌐 My personal website built with Next.js, TypeScript,  and @chakra-ui.",
   "version": "1.0.0",
   "author": "Anthony Collier <hello@acollier.dev>",
   "license": "MIT",
@@ -16,9 +16,6 @@
   },
   "dependencies": {
     "@chakra-ui/react": "1.5.1",
-    "@emotion/react": "11.1.5",
-    "@emotion/styled": "11.3.0",
-    "framer-motion": "4.1.4",
     "next": "^11.1.0",
     "next-seo": "^4.26.0",
     "react": "17.0.2",
@@ -26,10 +23,8 @@
     "react-icons": "4.2.0"
   },
   "devDependencies": {
-    "@testing-library/react": "11.2.6",
     "@types/react": "17.0.3",
     "@types/react-dom": "17.0.3",
-    "@web/test-runner": "0.12.19",
     "prettier": "2.2.1",
     "typescript": "4.2.4"
   }
