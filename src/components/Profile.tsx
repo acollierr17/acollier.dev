@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Badge, BadgeProps, Text, useColorMode } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import ProfileIcon from './ProfileIcon';
 
 interface ProfileProps {
@@ -30,18 +30,18 @@ export default function Profile(props: ProfileProps) {
 
   const badgeStyle = {
     transition: 'padding-right 0.6s',
-    'animation-timing-function': show ? 'ease-in' : 'ease-out',
-    'border-radius': '60px',
+    animationTimingFunction: show ? 'ease-in' : 'ease-out',
+    borderRadius: '60px',
   };
 
   const textStyle = {
-    'font-size': show ? 'smaller' : '0px',
-    'letter-spacing': show ? 'inherit' : '-10px',
-    'padding-left': show ? '0.8rem' : 'inherit',
-    'padding-bottom': show ? '3px' : 'inherit',
+    fontSize: show ? 'smaller' : '0px',
+    letterSpacing: show ? 'inherit' : '-10px',
+    paddingLeft: show ? '0.8rem' : 'inherit',
+    paddingBottom: show ? '3px' : 'inherit',
     transition:
       'font-size 0.6s 0.1s, padding-left 0.6s, padding-bottom 0.6s, letter-spacing 0.6s 0.3s',
-    'animation-timing-function': show ? 'ease-in' : 'ease-out',
+    animationTimingFunction: show ? 'ease-in' : 'ease-out',
   };
 
   return (
@@ -65,13 +65,11 @@ export default function Profile(props: ProfileProps) {
       }}
       {...hovered}>
       <Link
-        to={
+        href={
           props?.external ?? false
             ? { pathname: props?.link ?? '#' }
             : props?.link ?? '#'
-        }
-        target="_blank"
-        rel="noopener noreferrer">
+        }>
         <Text display="flex" alignItems="center">
           <ProfileIcon name={props.name} />
           <Text color={isDarkMode ? 'gray.800' : 'white'} style={textStyle}>
