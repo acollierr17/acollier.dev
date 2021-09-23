@@ -21,7 +21,6 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;0,700;1,800&display=swap"
             rel="stylesheet"
           />
-          <title>Anthony Collier</title>
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
