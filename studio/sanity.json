@@ -1,0 +1,43 @@
+{
+  "root": true,
+  "project": {
+    "name": "Anthony Collier Blog",
+    "basePath": "/studio"
+  },
+  "api": {
+    "projectId": "1tebfmes",
+    "dataset": "prodution"
+  },
+  "plugins": [
+    "@sanity/base",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "@sanity/production-preview",
+    "iframe-pane"
+  ],
+  "env": {
+    "development": {
+      "api": {
+        "dataset": "development"
+      },
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./src/structure/deskStructure"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
+    }
+  ]
+}

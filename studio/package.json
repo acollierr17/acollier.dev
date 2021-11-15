@@ -1,0 +1,35 @@
+{
+  "name": "blog",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "package.json",
+  "author": "Anthony Collier <gamemaniac101@gmail.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "sanity start",
+    "build": "sanity build"
+  },
+  "keywords": [
+    "sanity"
+  ],
+  "dependencies": {
+    "@sanity/base": "^2.21.10",
+    "@sanity/core": "^2.21.11",
+    "@sanity/default-layout": "^2.21.10",
+    "@sanity/default-login": "^2.21.10",
+    "@sanity/desk-tool": "^2.21.10",
+    "@sanity/production-preview": "^2.15.0",
+    "@sanity/vision": "^2.21.10",
+    "prop-types": "^15.7",
+    "react": "^17.0",
+    "react-dom": "^17.0",
+    "sanity-plugin-iframe-pane": "^1.0.14",
+    "styled-components": "^5.2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acollierr17/acollier.dev.git"
+  }
+}

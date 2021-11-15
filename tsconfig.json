@@ -10,7 +10,10 @@
     "jsx": "preserve",
     "baseUrl": "./",
     /* paths - If you configure Snowpack import aliases, add them here. */
-    "paths": {},
+    "paths": {
+      "@lib/*": ["./lib/*"],
+      "@components/*": ["./components/*"]
+    },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
     /* Additional Options */
@@ -27,9 +30,10 @@
     ],
     "allowJs": true,
     "esModuleInterop": true,
-    "isolatedModules": true
+    "isolatedModules": true,
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules"
-  ]
+  ],
 }
