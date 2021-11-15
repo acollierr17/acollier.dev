@@ -5,6 +5,7 @@ import type { ReactElement, ReactNode } from 'react';
 import { DefaultSeo } from 'next-seo';
 
 import theme from '../theme';
+import Layout from '../layouts/layout';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -15,8 +16,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  const getLayout = Component.getLayout ?? ((page) => page);
-
   return (
     <ChakraProvider theme={theme}>
       <DefaultSeo
@@ -40,7 +39,9 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
           },
         ]}
       />
-      {getLayout(<Component {...pageProps} />)}
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
     </ChakraProvider>
   );
 }

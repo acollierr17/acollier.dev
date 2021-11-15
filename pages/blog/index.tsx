@@ -1,12 +1,10 @@
 import { useRouter } from 'next/router';
-import type { ReactElement } from 'react';
 import { Heading, VStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
 import { getClient, usePreviewSubscription } from '@lib/sanity';
 import { indexQuery } from '@lib/queries';
 import PostPreview from '../../components/blog/PostPreview';
-import Layout from '../../layouts/layout';
 
 export default function Posts({ data, preview }: any) {
   const router = useRouter();
@@ -41,10 +39,6 @@ export default function Posts({ data, preview }: any) {
     </>
   );
 }
-
-Posts.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
 
 export async function getStaticProps({ preview = false }: any) {
   const posts = await getClient(preview).fetch(indexQuery);

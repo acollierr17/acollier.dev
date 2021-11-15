@@ -2,12 +2,10 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useToast } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import type { ReactElement } from 'react';
 
 import client, { getClient, urlFor, usePreviewSubscription } from '@lib/sanity';
 import { postBySlugQuery, postSlugsQuery } from '@lib/queries';
 
-import Layout from '../../layouts/layout';
 import BlogPost from '../../components/blog/BlogPost';
 
 export default function Post({ data, preview }: any) {
@@ -89,10 +87,6 @@ export default function Post({ data, preview }: any) {
     </>
   );
 }
-
-Post.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
 
 function filterDataToSingleItem(data: Array<any> | any, preview) {
   if (!Array.isArray(data)) return data;

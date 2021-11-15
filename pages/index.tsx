@@ -1,9 +1,7 @@
 import { Box, Text, Heading, HStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
-import type { ReactElement } from 'react';
 
 import Profile from '../components/Profile';
-import Layout from '../layouts/layout';
 
 export default function Home() {
   return (
@@ -54,7 +52,3 @@ export default function Home() {
     </>
   );
 }
-
-Home.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};

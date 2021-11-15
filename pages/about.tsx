@@ -1,5 +1,3 @@
-import type { ReactElement } from 'react';
-import Layout from '../layouts/layout';
 import { Box, Heading, Text, VStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
@@ -35,7 +33,3 @@ export default function About() {
     </>
   );
 }
-
-About.getLayout = function getLayout(page: ReactElement) {
-  return <Layout>{page}</Layout>;
-};
