@@ -5,6 +5,7 @@ import { NextSeo } from 'next-seo';
 import { getClient, usePreviewSubscription } from '@lib/sanity';
 import { indexQuery } from '@lib/queries';
 import PostPreview from '../../components/blog/PostPreview';
+import generateRssFeed from '../../lib/generateRssFeed';
 
 export default function Posts({ data, preview }: any) {
   const router = useRouter();
@@ -42,6 +43,7 @@ export default function Posts({ data, preview }: any) {
 
 export async function getStaticProps({ preview = false }: any) {
   const posts = await getClient(preview).fetch(indexQuery);
+  await generateRssFeed();
 
   return {
     props: {
