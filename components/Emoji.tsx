@@ -5,13 +5,11 @@ type EmojiProps = {
 
 export default function Emoji(props: EmojiProps) {
   return (
-    <>
-      <span
-        role="img"
-        aria-label={props?.label ?? ''}
-        aria-hidden={!!props?.label}>
-        {props.symbol}
-      </span>
-    </>
+    <span
+      role="img"
+      aria-label={props?.label ?? ''}
+      aria-hidden={!!props?.label}>
+      {props.symbol}
+    </span>
   );
 }
