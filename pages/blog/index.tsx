@@ -2,7 +2,8 @@ import { useRouter } from 'next/router';
 import { Heading, VStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
-import { getClient, usePreviewSubscription } from '@lib/sanity';
+import { usePreviewSubscription } from '@lib/sanity';
+import { getClient } from '@lib/sanity.server';
 import { indexQuery } from '@lib/queries';
 import PostPreview from '../../components/blog/PostPreview';
 import generateRssFeed from '../../lib/generateRssFeed';

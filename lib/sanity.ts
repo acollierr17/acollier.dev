@@ -1,50 +1,38 @@
-import React from 'react';
 import type { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import type { PreviewData } from 'next';
 
 import {
-  createClient,
   createPortableTextComponent,
   createImageUrlBuilder,
   createPreviewSubscriptionHook,
 } from 'next-sanity';
 
-import { config } from './config';
+import { sanityConfig } from './config';
 
-if (!config.projectId) {
+if (!sanityConfig.projectId) {
   throw Error('The Project ID is not set. Check your environment variables.');
 }
 export const urlFor = (source: SanityImageSource) =>
-  createImageUrlBuilder(config).image(source);
+  createImageUrlBuilder(sanityConfig).image(source);
 
-export const imageBuilder = (source: SanityImageSource) =>
-  createImageUrlBuilder(config).image(source);
-
-export const usePreviewSubscription = createPreviewSubscriptionHook(config);
+export const usePreviewSubscription =
+  createPreviewSubscriptionHook(sanityConfig);
 
 const serializers = {
   types: {
-    code: (props: any) => (
+    code: (props: any) => `
       <pre data-language={props.node.language}>
         <code>{props.node.code}</code>
       </pre>
-    ),
+    `,
   },
 };
 
 // Set up Portable Text serialization
 export const PortableText = createPortableTextComponent({
-  ...config,
+  ...sanityConfig,
   // Serializers passed to @sanity/block-content-to-react
   // (https://github.com/sanity-io/block-content-to-react)
   serializers,
-});
-
-export const client = createClient(config);
-
-export const previewClient = createClient({
-  ...config,
-  useCdn: false,
 });
 
 const defaults = { nonTextBehavior: 'remove' };
@@ -62,7 +50,3 @@ export const blocksToText = (blocks, opts?) => {
     })
     .join('\n\n');
 };
-
-export const getClient = (usePreview: PreviewData) =>
-  usePreview ? previewClient : client;
-export default client;

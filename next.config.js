@@ -1,5 +1,4 @@
 // @ts-check
-
 const STUDIO_REWRITE = {
   source: '/studio/:path*',
   destination:
@@ -12,9 +11,9 @@ const STUDIO_REWRITE = {
  * @type {import('next').NextConfig}
  **/
 const nextConfig = {
-  /* config options here */
   distDir: 'build',
   rewrites: () => [STUDIO_REWRITE],
+  swcMinify: true,
 };
 
 module.exports = nextConfig;
