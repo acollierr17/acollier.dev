@@ -78,7 +78,7 @@ export default function PostPreview({ post }: any) {
             mb={3}>
             {post.excerpt}
           </Text>
-          <BlogAuthor author={post.author} published={post.date} />
+          <BlogAuthor author={post.author} published={post.published} />
         </Box>
       </Box>
     </>
