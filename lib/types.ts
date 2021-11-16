@@ -26,3 +26,8 @@ export type YouTube = {
   subscriberCount: number;
   viewCount: number;
 };
+
+export type GitHub = {
+  followers: number;
+  stars: number;
+};
