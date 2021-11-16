@@ -1,3 +1,4 @@
+// Credit: https://github.com/leerob/leerob.io/blob/main/pages/api/youtube.ts
 import { google } from 'googleapis';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import googleAuth from '@lib/google';

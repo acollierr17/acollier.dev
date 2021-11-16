@@ -1,3 +1,4 @@
+// Credits: https://github.com/leerob/leerob.io/blob/main/lib/google.ts
 import { google } from 'googleapis';
 
 const googleAuth = new google.auth.GoogleAuth({

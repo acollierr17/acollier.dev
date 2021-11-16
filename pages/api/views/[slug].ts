@@ -1,3 +1,4 @@
+// Credit: https://github.com/leerob/leerob.io/blob/main/pages/api/views/%5Bslug%5D.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 import prisma from '@lib/prisma';
 

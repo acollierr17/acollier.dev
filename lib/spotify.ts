@@ -1,4 +1,4 @@
-import fetch from 'isomorphic-unfetch';
+// Credits: https://github.com/leerob/leerob.io/blob/main/lib/spotify.ts
 import querystring from 'querystring';
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;

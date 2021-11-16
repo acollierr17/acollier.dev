@@ -1,3 +1,4 @@
+// Credits: https://github.com/leerob/leerob.io/blob/main/components/ViewCounter.tsx
 import { useEffect } from 'react';
 import useSWR from 'swr';
 

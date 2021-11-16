@@ -1,3 +1,4 @@
+// Credits: https://github.com/leerob/leerob.io/blob/main/layouts/blog.tsx#L33
 import { Box, Heading, HStack } from '@chakra-ui/react';
 
 import BlogAuthor from './BlogAuthor';

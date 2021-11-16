@@ -1,3 +1,4 @@
+// Credit: https://github.com/leerob/leerob.io/blob/main/pages/api/now-playing.ts
 import { getNowPlaying } from '@lib/spotify';
 import type { NextApiRequest, NextApiResponse } from 'next';
 

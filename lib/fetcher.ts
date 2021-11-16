@@ -1,5 +1,4 @@
-import fetch from 'isomorphic-unfetch';
-
+// Credits: https://github.com/leerob/leerob.io/blob/main/lib/fetcher.ts
 export default async function fetcher<JSON = any>(
   input: RequestInfo,
   init?: RequestInit,

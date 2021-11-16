@@ -1,3 +1,4 @@
+// Credits: https://github.com/leerob/leerob.io/blob/main/components/NowPlaying.tsx
 import useSWR from 'swr';
 import { useEffect } from 'react';
 import { animate } from 'motion';
