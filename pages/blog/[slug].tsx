@@ -57,24 +57,22 @@ export default function Post({ data, preview }: any) {
             title={post.title}
             description={post.excerpt}
             openGraph={{
-              title: post.title,
+              title: `${post.title} • Anthony Collier`,
               description: post.excerpt,
-              url: `https://acollier.dev/blog/${slug}`,
               type: 'article',
               article: {
-                publishedTime: post.date,
+                publishedTime: post.published,
+                modifiedTime: post.edited,
                 authors: ['https://acollier.dev/about'],
               },
               images: [
                 {
                   url: urlFor(post.coverImage)
-                    .width(800)
+                    .width(1820)
+                    .height(904)
                     .auto('format')
                     .quality(80)
-                    .fit('crop')
                     .url()!,
-                  width: 800,
-                  height: 600,
                   alt: post.coverImage.alt,
                   type: 'image/jpeg',
                 },

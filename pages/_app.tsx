@@ -6,6 +6,7 @@ import { DefaultSeo } from 'next-seo';
 
 import theme from '../theme';
 import Layout from '../layouts/layout';
+import { useRouter } from 'next/router';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -16,16 +17,22 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const router = useRouter();
+
   return (
     <ChakraProvider theme={theme}>
       <DefaultSeo
         titleTemplate="%s • Anthony Collier"
         defaultTitle="Anthony Collier"
+        description="My corner on the internet. Welcome!"
+        canonical={`https://acollier.dev${router.asPath}`}
         openGraph={{
           type: 'website',
           locale: 'en_US',
-          url: 'https://acollier.dev',
+          url: `https://acollier.dev${router.asPath}`,
           site_name: 'Anthony Collier',
+          title: 'Anthony Collier',
+          description: 'My corner on the internet. Welcome!',
         }}
         twitter={{
           handle: '@acollierr17',

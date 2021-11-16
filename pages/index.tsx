@@ -1,19 +1,10 @@
 import { Box, Text, Heading, HStack } from '@chakra-ui/react';
-import { NextSeo } from 'next-seo';
 
 import Profile from '../components/Profile';
 
 export default function Home() {
   return (
     <>
-      <NextSeo
-        description="My corner on the internet. Welcome!"
-        openGraph={{
-          title: 'Home',
-          description: 'My corner on the internet. Welcome!',
-          url: 'https://acollier.dev',
-        }}
-      />
       <Box>
         <Heading mb={4} w={[300, 400, 560]}>
           Hello, the name's Anthony

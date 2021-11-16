@@ -8,9 +8,8 @@ export default function About() {
         title="About Me"
         description="Let me introduce myself. Anthony Collier."
         openGraph={{
-          title: 'About Me',
+          title: 'About Me • Anthony Collier',
           description: 'Let me introduce myself. Anthony Collier.',
-          url: 'https://acollier.dev/blog',
         }}
       />
       <Box>

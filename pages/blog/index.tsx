@@ -25,10 +25,9 @@ export default function Posts({ data, preview }: any) {
         title="Blog"
         description="Keep up with new thoughts and ideas I share to the world."
         openGraph={{
-          title: 'Blog',
+          title: 'Blog • Anthony Collier',
           description:
             'Keep up wih new thoughts and ideas I share to the world.',
-          url: 'https://acollier.dev/blog',
         }}
       />
       <Heading as="h1">Recent Posts</Heading>
