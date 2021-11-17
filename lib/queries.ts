@@ -2,6 +2,7 @@ const postFields = `
   _id,
   name,
   title,
+  'categories': categories[]->title,
   'published': publishedAt,
   'edited': _updatedAt,
   excerpt,
