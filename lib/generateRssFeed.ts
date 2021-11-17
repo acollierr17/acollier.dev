@@ -1,17 +1,23 @@
 // Credits: https://github.com/sreetamdas/sreetamdas.com/blob/main/src/components/blog/rss.tsx
 import fs from 'fs';
 import { Feed } from 'feed';
+import type { Author } from 'feed';
+import type { Category } from 'feed/lib/typings';
 
 import { getAllBlogPosts } from './sanity.server';
+import { urlFor } from './sanity';
 
 export default async function generateRssFeed() {
   const posts = await getAllBlogPosts();
-  const siteUrl = 'https://acollier.dev';
+  const siteUrl =
+    process.env.NODE_ENV === 'production'
+      ? 'https://acollier.dev'
+      : 'https://acollierdev.ngrok.io';
   const date = new Date();
-  const author = {
+  const author: Author = {
     name: 'Anthony Collier',
     email: 'hello@acollier.dev',
-    link: 'https://twitter.com/acollierr17',
+    link: `${siteUrl}/about`,
   };
 
   const feed = new Feed({
@@ -42,8 +48,15 @@ export default async function generateRssFeed() {
       description: post.excerpt,
       content: post.excerpt,
       author: [author],
-      contributor: [author],
       date: new Date(post.published),
+      category: post.categories.map((cat: Category) => ({ name: cat })),
+      image: urlFor(post.coverImage)
+        .width(1820)
+        .height(904)
+        .auto('format')
+        .quality(80)
+        .url()!
+        .replace(/&/g, '&amp;'),
     });
   }
 
