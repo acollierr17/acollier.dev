@@ -119,3 +119,8 @@ web_modules
 
 # Google Service Account
 service-account.json
+
+# Service Worker
+public/workbox-*.js
+public/sw.js
+public/worker-*.js
