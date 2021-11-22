@@ -127,3 +127,5 @@ public/worker-*.js
 
 # Sanity
 public/studio
+
+.vercel
