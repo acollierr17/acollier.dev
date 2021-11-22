@@ -6,7 +6,7 @@
   },
   "api": {
     "projectId": "1tebfmes",
-    "dataset": "prodution"
+    "dataset": "production"
   },
   "plugins": [
     "@sanity/base",
