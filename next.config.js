@@ -1,4 +1,6 @@
 // @ts-check
+const withPWA = require('next-pwa');
+
 const STUDIO_REWRITE = {
   source: '/studio/:path*',
   destination:
@@ -14,6 +16,10 @@ const nextConfig = {
   distDir: 'build',
   rewrites: () => [STUDIO_REWRITE],
   swcMinify: true,
+  pwa: {
+    dest: 'public',
+    disable: process.env.NODE_ENV === 'development',
+  },
 };
 
-module.exports = nextConfig;
+module.exports = withPWA(nextConfig);
