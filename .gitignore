@@ -124,3 +124,6 @@ service-account.json
 public/workbox-*.js
 public/sw.js
 public/worker-*.js
+
+# Sanity
+public/studio
