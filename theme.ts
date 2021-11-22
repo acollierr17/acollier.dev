@@ -3,6 +3,10 @@ import { mode } from '@chakra-ui/theme-tools';
 import type { ThemeConfig } from '@chakra-ui/react';
 
 const theme = extendTheme(<ThemeConfig>{
+  fonts: {
+    heading: 'Raleway',
+    body: 'Mulish',
+  },
   initialColorMode: 'light',
   useSystemColorMode: true,
   colors: {

@@ -1,3 +1,6 @@
+import '@fontsource/mulish/400.css';
+import '@fontsource/raleway/700.css';
+
 import { ChakraProvider } from '@chakra-ui/react';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';

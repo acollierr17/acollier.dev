@@ -30,7 +30,7 @@ export default function Posts({ data, preview }: any) {
             'Keep up wih new thoughts and ideas I share to the world.',
         }}
       />
-      <Heading as="h1">Recent Posts</Heading>
+      <Heading size="2xl">Recent Posts</Heading>
       <VStack spacing={12} marginTop={{ base: '1', sm: '5' }}>
         {postsData.map((post: any, i: number) => (
           <PostPreview key={i} post={post} />

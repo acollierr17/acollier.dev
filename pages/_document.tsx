@@ -35,10 +35,6 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#dd9323" />
         <meta name="msapplication-config" content="/icons/browserconfig.xml" />
         <meta name="theme-color" content="#dd9323" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,500;0,700;1,800&display=swap"
-          rel="stylesheet"
-        />
       </Head>
       <body>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
