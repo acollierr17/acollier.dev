@@ -1,6 +1,7 @@
 import { Box, Text, Heading, HStack } from '@chakra-ui/react';
 
 import Profile from '../components/Profile';
+import { SocialLinks } from '../lib/types';
 
 export default function Home() {
   return (
@@ -23,19 +24,19 @@ export default function Home() {
       <HStack mt={6} spacing="17px" justify="left">
         <Profile
           name="GitHub"
-          link="https://github.com/acollierr17"
+          link={SocialLinks.GITHUB}
           colorScheme="github"
           external
         />
         <Profile
           name="Discord"
-          link="https://discord.gg/rgK9cGTwEs"
+          link={SocialLinks.DISCORD}
           colorScheme="discord"
           external
         />
         <Profile
           name="YouTube"
-          link="https://www.youtube.com/channel/UCI_HY3KnAH_VusYqFvL2U9g"
+          link={SocialLinks.YOUTUBE}
           colorScheme="youtube"
           external
         />

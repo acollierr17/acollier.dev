@@ -31,3 +31,9 @@ export type GitHub = {
   followers: number;
   stars: number;
 };
+
+export enum SocialLinks {
+  GITHUB = 'https://github.com/acollierr17',
+  DISCORD = 'https://discord.gg/9dJjWkupDC',
+  YOUTUBE = 'https://youtube.com/c/AnthonyCollier',
+}
