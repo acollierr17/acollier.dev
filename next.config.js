@@ -1,5 +1,6 @@
 // @ts-check
 const withPWA = require('next-pwa');
+const runtimeCaching = require('next-pwa/cache');
 
 const STUDIO_REWRITE = {
   source: '/studio/:path*',
@@ -19,6 +20,10 @@ const nextConfig = {
   pwa: {
     dest: 'public',
     disable: process.env.NODE_ENV === 'development',
+    register: true,
+    skipWaiting: true,
+    runtimeCaching,
+    buildExcludes: [/middleware-manifest.json$/],
   },
 };
 
