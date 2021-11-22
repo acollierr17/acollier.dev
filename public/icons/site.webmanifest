@@ -1,0 +1,24 @@
+{
+    "name": "Anthony Collier",
+    "short_name": "acollier.dev",
+    "description": "My corner on the internet. Welcome!",
+    "icons": [
+        {
+            "src": "/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#dd9323",
+    "background_color": "#636e72",
+    "display": "standalone",
+    "dir": "ltr",
+    "lang": "en-US",
+    "orientation": "portrait-primary",
+    "start_url": "/"
+}
