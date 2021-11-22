@@ -1,5 +1,4 @@
 // Credits: https://github.com/sreetamdas/sreetamdas.com/blob/main/src/components/blog/rss.tsx
-import fs from 'fs';
 import { Feed } from 'feed';
 import type { Author } from 'feed';
 import type { Category } from 'feed/lib/typings';
@@ -7,7 +6,9 @@ import type { Category } from 'feed/lib/typings';
 import { getAllBlogPosts } from './sanity.server';
 import { urlFor } from './sanity';
 
-export default async function generateRssFeed() {
+type FeedType = 'regular' | 'atom' | 'json';
+
+export default async function generateRssFeed(type: FeedType) {
   const posts = await getAllBlogPosts();
   const siteUrl =
     process.env.NODE_ENV === 'production'
@@ -60,8 +61,11 @@ export default async function generateRssFeed() {
     });
   }
 
-  fs.mkdirSync('./public/rss', { recursive: true });
-  fs.writeFileSync('./public/rss/feed.xml', feed.rss2());
-  fs.writeFileSync('./public/rss/atom.xml', feed.atom1());
-  fs.writeFileSync('./public/rss/feed.json', feed.json1());
+  const mappedTypes: Record<FeedType, string> = {
+    regular: 'rss2',
+    atom: 'atom1',
+    json: 'json1',
+  };
+
+  return feed[mappedTypes[type]]();
 }
