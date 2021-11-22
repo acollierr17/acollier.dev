@@ -119,7 +119,3 @@ web_modules
 
 # Google Service Account
 service-account.json
-
-# Misc /public folders
-public/rss
-public/sitemap.xml
