@@ -2,14 +2,16 @@ import '@fontsource/mulish/400.css';
 import '@fontsource/raleway/700.css';
 
 import { ChakraProvider } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
+import { DefaultSeo } from 'next-seo';
 import type { NextPage } from 'next';
 import type { AppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
-import { DefaultSeo } from 'next-seo';
 
 import theme from '../theme';
 import Layout from '../layouts/layout';
-import { useRouter } from 'next/router';
+
+import { useAnalytics } from '@lib/analytics';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -20,6 +22,8 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  useAnalytics();
+
   const router = useRouter();
 
   return (
