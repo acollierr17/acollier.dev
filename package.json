@@ -23,7 +23,7 @@
     "@emotion/styled": "11.6.0",
     "@fontsource/mulish": "4.5.2",
     "@fontsource/raleway": "4.5.0",
-    "@prisma/client": "3.2.1",
+    "@prisma/client": "3.5.0",
     "@sanity/block-content-to-react": "3.0.0",
     "fathom-client": "3.2.0",
     "feed": "4.2.2",
@@ -44,7 +44,7 @@
     "@types/react": "17.0.36",
     "@types/react-dom": "17.0.11",
     "prettier": "2.4.1",
-    "prisma": "3.2.1",
+    "prisma": "3.5.0",
     "reading-time": "1.5.0",
     "typescript": "4.5.2"
   }
