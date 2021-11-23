@@ -48,8 +48,7 @@ export default function Profile(props: ProfileProps) {
     <Badge
       display="inline-flex"
       alignItems="center"
-      px={4}
-      py={4}
+      p={4}
       fontSize="2rem"
       h="65px"
       minW="65px"

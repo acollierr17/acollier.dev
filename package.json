@@ -12,23 +12,40 @@
     "build": "next build",
     "dev": "next dev",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "prebuild": "echo 'Building Sanity to public/studio' && cd studio && yarn && npx @sanity/cli build ../public/studio -y && echo 'Done'",
+    "sanity": "cd studio && yarn start",
+    "migrate:postgres": "dotenv -e .env.local -- npx prisma migrate dev --name init"
   },
   "dependencies": {
-    "@chakra-ui/react": "1.6.8",
-    "@emotion/react": "11.4.1",
-    "@emotion/styled": "11.3.0",
-    "framer-motion": "4.1.17",
-    "next": "11.1.2",
+    "@chakra-ui/react": "1.7.2",
+    "@emotion/react": "11.6.0",
+    "@emotion/styled": "11.6.0",
+    "@fontsource/mulish": "^4.5.2",
+    "@fontsource/raleway": "^4.5.0",
+    "@prisma/client": "^3.2.1",
+    "@sanity/block-content-to-react": "^3.0.0",
+    "fathom-client": "^3.2.0",
+    "feed": "^4.2.2",
+    "framer-motion": "5.3.1",
+    "googleapis": "^88.2.0",
+    "motion": "^10.4.0",
+    "next": "12.0.4",
+    "next-pwa": "^5.4.0",
+    "next-sanity": "^0.4.0",
     "next-seo": "4.28.1",
+    "querystring": "^0.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "react-icons": "4.2.0"
+    "react-icons": "4.3.1",
+    "swr": "^1.0.1"
   },
   "devDependencies": {
-    "@types/react": "17.0.24",
-    "@types/react-dom": "17.0.9",
+    "@types/react": "17.0.35",
+    "@types/react-dom": "17.0.11",
     "prettier": "2.4.1",
-    "typescript": "4.4.3"
+    "prisma": "^3.2.1",
+    "reading-time": "^1.5.0",
+    "typescript": "4.5.2"
   }
 }
