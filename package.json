@@ -25,6 +25,7 @@
     "@fontsource/raleway": "^4.5.0",
     "@prisma/client": "^3.2.1",
     "@sanity/block-content-to-react": "^3.0.0",
+    "fathom-client": "^3.2.0",
     "feed": "^4.2.2",
     "framer-motion": "5.3.1",
     "googleapis": "^88.2.0",
