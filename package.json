@@ -15,7 +15,9 @@
     "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
     "prebuild": "echo 'Building Sanity to public/studio' && cd studio && yarn && npx @sanity/cli build ../public/studio -y && echo 'Done'",
     "sanity": "cd studio && yarn start",
-    "migrate:postgres": "dotenv -e .env.local -- npx prisma migrate dev --name init"
+    "migrate:postgres": "dotenv -e .env.local -- npx prisma migrate dev --name init",
+    "prisma:deploy": "prisma generate && prisma migrate deploy",
+    "prisma:vercel": "yarn run prisma:deploy && yarn build"
   },
   "dependencies": {
     "@chakra-ui/react": "1.7.2",
