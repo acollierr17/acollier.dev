@@ -1,6 +1,6 @@
 import type { GetServerSidePropsContext } from 'next';
 
-import { getAllBlogPosts } from '@lib/sanity.server';
+import { getAllBlogPosts } from '@lib/sanity/sanity.server';
 
 export default function Sitemap() {}
 

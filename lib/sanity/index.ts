@@ -7,6 +7,7 @@ import {
 } from 'next-sanity';
 
 import { sanityConfig } from './config';
+import serializers from './serializers';
 
 if (!sanityConfig.projectId) {
   throw Error('The Project ID is not set. Check your environment variables.');
@@ -16,16 +17,6 @@ export const urlFor = (source: SanityImageSource) =>
 
 export const usePreviewSubscription =
   createPreviewSubscriptionHook(sanityConfig);
-
-const serializers = {
-  types: {
-    code: (props: any) => `
-      <pre data-language={props.node.language}>
-        <code>{props.node.code}</code>
-      </pre>
-    `,
-  },
-};
 
 // Set up Portable Text serialization
 export const PortableText = createPortableTextComponent({
