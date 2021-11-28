@@ -4,8 +4,8 @@ import { useToast } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
 import { urlFor, usePreviewSubscription } from '@lib/sanity';
-import client, { getClient } from '@lib/sanity.server';
-import { postBySlugQuery, postSlugsQuery } from '@lib/queries';
+import client, { getClient } from '@lib/sanity/sanity.server';
+import { postBySlugQuery, postSlugsQuery } from '@lib/sanity/queries';
 
 import BlogPost from '../../components/blog/BlogPost';
 

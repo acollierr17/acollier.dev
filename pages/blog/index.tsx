@@ -3,9 +3,9 @@ import { Heading, VStack } from '@chakra-ui/react';
 import { NextSeo } from 'next-seo';
 
 import { usePreviewSubscription } from '@lib/sanity';
-import { getClient } from '@lib/sanity.server';
-import { indexQuery } from '@lib/queries';
-import PostPreview from '../../components/blog/PostPreview';
+import { getClient } from '@lib/sanity/sanity.server';
+import { indexQuery } from '@lib/sanity/queries';
+import PostPreview from '@components/blog/PostPreview';
 
 export default function Posts({ data, preview }: any) {
   const router = useRouter();

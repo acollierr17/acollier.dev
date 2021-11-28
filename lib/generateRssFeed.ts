@@ -3,7 +3,7 @@ import { Feed } from 'feed';
 import type { Author } from 'feed';
 import type { Category } from 'feed/lib/typings';
 
-import { getAllBlogPosts } from './sanity.server';
+import { getAllBlogPosts } from './sanity/sanity.server';
 import { urlFor } from './sanity';
 
 type FeedType = 'regular' | 'atom' | 'json';
