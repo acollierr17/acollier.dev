@@ -25,7 +25,7 @@
     "@emotion/styled": "11.6.0",
     "@fontsource/mulish": "4.5.5",
     "@fontsource/raleway": "4.5.3",
-    "@prisma/client": "3.5.0",
+    "@prisma/client": "3.9.2",
     "fathom-client": "3.2.0",
     "feed": "4.2.2",
     "framer-motion": "5.6.0",
@@ -46,7 +46,7 @@
     "@types/react": "17.0.39",
     "@types/react-dom": "17.0.11",
     "prettier": "2.5.1",
-    "prisma": "3.5.0",
+    "prisma": "3.9.2",
     "reading-time": "1.5.0",
     "typescript": "4.5.5"
   }
