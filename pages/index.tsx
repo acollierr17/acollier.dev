@@ -11,14 +11,9 @@ export default function Home() {
           Hello, the name's Anthony
         </Heading>
         <Text fontSize="xl">
-          This is my own personal website and corner on the internet. It's 2021
-          and it's about time I created one of these. So welcome!
-        </Text>
-        <br />
-        <Text fontSize="xl">
-          If you've seen my site before, you can see notable changes such as a
-          blog and a page to give you a bit more information about me. Thanks
-          for stopping by!
+          This is my own personal website and corner on the internet. Feel free
+          to look around and get an idea of who I am! If you have any feedback,
+          drop it over on the GitHub!
         </Text>
       </Box>
       <HStack mt={6} spacing="17px" justify="left">
