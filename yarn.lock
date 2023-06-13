@@ -1598,15 +1598,15 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@fontsource/mulish@4.5.5":
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-4.5.5.tgz#5432c64cf52302ae4556e81087a6238fb957ea05"
-  integrity sha512-wWYKygkWHIM+yd3X4XOPYnchuv5m/Cgp9cBqWzZtPGLrOnCA8x2J9IfEseuqQmkbv0RhUJEgiCNt5FiT+YZHmA==
+"@fontsource/mulish@4.5.14":
+  version "4.5.14"
+  resolved "https://registry.yarnpkg.com/@fontsource/mulish/-/mulish-4.5.14.tgz#77bbbaca4c30d345d66083d8a1e06c79b966c913"
+  integrity sha512-EniB9wVc6hhCY4Vo+d80tOfAgHFIxXaApIuczzRJsqHF55UjncEo4OD/Kyl/LGwLlZ7ya4sf0/N6vJdRMBiwHw==
 
-"@fontsource/raleway@4.5.3":
-  version "4.5.3"
-  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.3.tgz#0a4477e037dbd9a4a26c1c9db3aa2bf93722b499"
-  integrity sha512-wJ8Rm8k5MuSnfERuL5Q1bd8Z80o3uWpC1vUmZAxcLXAY9IxnfGqZjZJ1Jd2lY1u5NaEo+zXCvHEViAIv6b1jEg==
+"@fontsource/raleway@4.5.12":
+  version "4.5.12"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.12.tgz#25a7bc448a8440a46205e7259e1f8cb03fa59e18"
+  integrity sha512-uKs13d6NFWU4vf5LSDHK/cbaAw+UXkzz03fKjyvkKq8Nop+CeB6o8STEDkZD9/uOo3v3sgm59Wyw8uGWvxoCiA==
 
 "@motionone/animation@^10.7.0":
   version "10.7.0"
