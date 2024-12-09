@@ -26,7 +26,7 @@
     "@fontsource/mulish": "4.5.5",
     "@fontsource/raleway": "4.5.3",
     "@prisma/client": "3.9.2",
-    "fathom-client": "3.4.1",
+    "fathom-client": "3.7.2",
     "feed": "4.2.2",
     "framer-motion": "6.3.3",
     "googleapis": "92.0.0",
