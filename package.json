@@ -43,8 +43,8 @@
     "swr": "1.2.0"
   },
   "devDependencies": {
-    "@types/react": "17.0.44",
-    "@types/react-dom": "17.0.16",
+    "@types/react": "17.0.90",
+    "@types/react-dom": "17.0.26",
     "prettier": "2.5.1",
     "prisma": "3.9.2",
     "reading-time": "1.5.0",
