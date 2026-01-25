@@ -11,6 +11,8 @@ export default class MyDocument extends Document {
   }
 
   render() {
+    const endpoint = process.env.NEXT_PUBLIC_PLAUSIBLE_ENDPOINT!;
+
     return (
       <Html lang="en">
         <Head>
@@ -46,6 +48,15 @@ export default class MyDocument extends Document {
             content="/icons/browserconfig.xml"
           />
           <meta name="theme-color" content="#dd9323" />
+          <script async src={`${endpoint}/js/script.js`}></script>
+          <script>
+            {`
+            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+            plausible.init({
+              endpoint: "${endpoint}/api/event"
+            })
+          `}
+          </script>
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

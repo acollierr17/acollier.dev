@@ -11,8 +11,6 @@ import type { ReactElement, ReactNode } from 'react';
 import theme from '../theme';
 import Layout from '../layouts/layout';
 
-import { useAnalytics } from '@lib/analytics';
-
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
 };
@@ -22,8 +20,6 @@ type AppPropsWithLayout = AppProps & {
 };
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
-  useAnalytics();
-
   const router = useRouter();
 
   return (
