@@ -7,9 +7,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  const auth = await googleAuth.getClient();
   const youtube = google.youtube({
-    auth,
+    auth: googleAuth,
     version: 'v3',
   });
 

@@ -49,14 +49,16 @@ export default class MyDocument extends Document {
           />
           <meta name="theme-color" content="#dd9323" />
           <script async src={`${endpoint}/js/script.js`}></script>
-          <script>
-            {`
-            window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
-            plausible.init({
-              endpoint: "${endpoint}/api/event"
-            })
-          `}
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+                plausible.init({
+                  endpoint: "${endpoint}/api/event"
+                })
+              `,
+            }}
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

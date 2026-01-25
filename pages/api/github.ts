@@ -1,6 +1,15 @@
 // Credit: https://github.com/leerob/leerob.io/blob/main/pages/api/github.ts
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+interface GitHubRepo {
+  fork: boolean;
+  stargazers_count: number;
+}
+
+interface GitHubUser {
+  followers: number;
+}
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
@@ -8,11 +17,11 @@ export default async function handler(
   const [user, repos] = await Promise.all([
     fetch('https://api.github.com/users/acollierr17'),
     fetch('https://api.github.com/users/acollierr17/repos?per_page=100'),
-  ]).then((res) => Promise.all(res.map((x) => x.json())));
+  ]).then((res) => Promise.all(res.map((x) => x.json()))) as [GitHubUser, GitHubRepo[]];
 
   const mine = repos.filter((repo) => !repo.fork);
   const stars = mine.reduce((acc, repo) => {
-    return acc + repo['stargazers_count'];
+    return acc + repo.stargazers_count;
   }, 0);
 
   res.setHeader(

@@ -1,8 +1,4 @@
 // Credits: https://github.com/leerob/leerob.io/blob/main/lib/spotify.ts
-export type Views = {
-  total: number;
-};
-
 export type Song = {
   songUrl: string;
   artist: string;

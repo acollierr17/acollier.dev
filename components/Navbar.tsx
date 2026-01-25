@@ -19,29 +19,33 @@ interface NavLink {
 
 const Links: Array<NavLink> = [
   { name: 'Home', url: '/' },
-  { name: 'Blog', url: '/blog' },
   { name: 'Projects', url: '#' },
   { name: 'About', url: '/about' },
 ];
 
-const NavLink = ({ name, url }: NavLink) => (
-  <Link href={url} passHref>
+const NavLink = ({ name, url }: NavLink) => {
+  const hoverBg = useColorModeValue(
+    'rgba(237, 242, 247, .7)',
+    'rgba(255, 255, 255, 0.08)',
+  );
+  const color = useColorModeValue('current', '#999999');
+
+  return (
     <ChakraLink
+      as={Link}
+      href={url}
       px={3}
       py={1}
       rounded={'md'}
       _hover={{
         textDecoration: 'none',
-        bg: useColorModeValue(
-          'rgba(237, 242, 247, .7)',
-          'rgba(255, 255, 255, 0.08)',
-        ),
+        bg: hoverBg,
       }}
-      color={useColorModeValue('current', '#999999')}>
+      color={color}>
       {name}
     </ChakraLink>
-  </Link>
-);
+  );
+};
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
