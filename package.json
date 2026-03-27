@@ -21,7 +21,7 @@
     "@fontsource/mulish": "^5.0.18",
     "@fontsource/raleway": "^5.0.18",
     "framer-motion": "^11.3.8",
-    "googleapis": "^140.0.1",
+    "googleapis": "^171.0.0",
     "next": "^14.2.5",
     "next-seo": "^6.5.0",
     "react": "^18.3.1",
