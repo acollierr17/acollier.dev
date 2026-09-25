@@ -22,7 +22,7 @@
     "@fontsource/raleway": "^5.0.18",
     "framer-motion": "^11.3.8",
     "googleapis": "^140.0.1",
-    "next": "^14.2.5",
+    "next": "^16.0.0",
     "next-seo": "^6.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
